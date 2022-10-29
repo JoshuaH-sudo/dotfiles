@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,7 +70,11 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+	git
+	zsh-autosuggestions
+	ansible
+	)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,3 +103,23 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias gs="git status"
+alias gl1="git log --graph --decorate --oneline"
+alias gl="git log --graph --decorate"
+alias gcl="git add . && git commit -a -m 'lazy commit: things changed'"
+alias gp="git push"
+alias gcam="git commit -a -m "
+
+alias cdh="cd ~/"
+alias srm='mv --verbose -f --backup=numbered --target-directory ~/.Trash/'
+alias wth="curl wttr.in/Canberra"
+
+#xclip
+alias "c=xclip"
+alias "v=xclip -o"
+alias "xx=xclip -selection clipboard"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
