@@ -1,3 +1,4 @@
-Install font for windows wsl to get zsh theme working
-https://github.com/lxbrtsch/Menlo-for-Powerline
+Install font for windows wsl to get zsh theme working, 
+use the patch: https://github.com/powerline/fonts
+use devicons compatiable patch instead.
 run font install script with font folder next to it

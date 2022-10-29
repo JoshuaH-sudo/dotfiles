@@ -396,15 +396,19 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree' 
 Plug 'preservim/nerdcommenter'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'PhilRunninger/nerdtree-visual-selection'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
-Plug 'PhilRunninger/nerdtree-visual-selection'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 call plug#end()
+
+"devicons
+set encoding=UTF-8
 
 "nert tree shortcuts
 "nnoremap <leader>n :NERDTreeFocus<CR>
