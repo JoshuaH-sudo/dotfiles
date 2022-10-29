@@ -1,4 +1,6 @@
 Install font for windows wsl to get zsh theme working, 
-use the patch: https://github.com/powerline/fonts
-use devicons compatiable patch instead.
+use devicons compatiable patch instead, Friacode.
 run font install script with font folder next to it
+
+install watchamn for tsserver
+https://facebook.github.io/watchman/docs/install.html

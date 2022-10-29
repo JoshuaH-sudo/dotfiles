@@ -274,6 +274,10 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
+"ubuntu keycode issues to allow move shortcuts to work
+map <Esc>k <A-k>
+map <Esc>j <A-j>
+
 " Move a line of text using ALT+[jk] or Command+[jk] on mac
 nmap <M-j> mz:m+<cr>`z
 nmap <M-k> mz:m-2<cr>`z
@@ -402,14 +406,28 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-react-refactor', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
+Plug 'SirVer/ultisnips'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'tpope/vim-fugitive'
 call plug#end()
+
+"nerd commenter
+nnoremap <silent> <leader>c} V}:call nerdcommenter#Comment('x', 'toggle')<CR>
+nnoremap <silent> <leader>c{ V{:call nerdcommenter#Comment('x', 'toggle')<CR>
+
+nmap <Leader>hl :nohl
 
 "devicons
 set encoding=UTF-8
+
+if has('gui_running')
+  set guifont=FiraCode \NFM:h12
+endif
 
 "nert tree shortcuts
 "nnoremap <leader>n :NERDTreeFocus<CR>
@@ -634,5 +652,5 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
-"CocInstall coc-react-refactor
 xmap <leader>ra  <Plug>(coc-codeaction-selected)
+nmap <leader>ra  <Plug>(coc-codeaction-selected)
