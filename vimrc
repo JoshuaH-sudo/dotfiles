@@ -420,7 +420,11 @@ call plug#end()
 "nerd commenter
 nnoremap <silent> <leader>c} V}:call nerdcommenter#Comment('x', 'toggle')<CR>
 nnoremap <silent> <leader>c{ V{:call nerdcommenter#Comment('x', 'toggle')<CR>
-let g:NERDCustomDelimiters = {'typescriptreact': { 'left': '//', 'leftAlt': '/**','rightAlt': '*/' }}
+let g:NERDCustomDelimiters = {
+      \ 'typescriptreact': { 'left': '//', 'leftAlt': '/**','rightAlt': '*/' }, 
+      \ 'typescript': { 'left': '//', 'leftAlt': '/**','rightAlt': '*/' },
+      \ 'javascript': { 'left': '//', 'leftAlt': '/**','rightAlt': '*/' }
+\}
 
 nmap <Leader>hl :nohl
 
