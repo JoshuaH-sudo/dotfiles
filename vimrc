@@ -411,10 +411,20 @@ Plug 'neoclide/coc-react-refactor', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
+Plug 'honza/vim-snippets',
 Plug 'SirVer/ultisnips'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'tpope/vim-fugitive'
 call plug#end()
+
+"nerd commenter
+nnoremap <silent> <leader>c} V}:call nerdcommenter#Comment('x', 'toggle')<CR>
+nnoremap <silent> <leader>c{ V{:call nerdcommenter#Comment('x', 'toggle')<CR>
+let g:NERDCustomDelimiters = {
+      \ 'typescriptreact': { 'left': '//', 'leftAlt': '/**','rightAlt': '*/' }, 
+      \ 'typescript': { 'left': '//', 'leftAlt': '/**','rightAlt': '*/' },
+      \ 'javascript': { 'left': '//', 'leftAlt': '/**','rightAlt': '*/' }
+\}
 
 nmap <Leader>hl :nohl
 

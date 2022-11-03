@@ -1,8 +1,7 @@
 - clean: ['~']
 
 - link:
-    ~/.profile: profile
-    ~/.bashrc: bashrc
+    ~/.vimrc: vimrc
     ~/.zshrc: zshrc
 
 
