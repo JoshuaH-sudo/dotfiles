@@ -4,3 +4,9 @@ run font install script with font folder next to it
 
 install watchamn for tsserver
 https://facebook.github.io/watchman/docs/install.html
+
+line  461: E1208: -complete used without allowing argumentsPress ENTER or type command to continue
+solve this error by running "PlugUpdate"
+
+add this to repository for latest vim
+sudo add-apt-repository ppa:jonathonf/vim
